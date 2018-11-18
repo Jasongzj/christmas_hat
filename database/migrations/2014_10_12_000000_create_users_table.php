@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('nickname')->nullable();
             $table->string('avatar_url')->nullable();
             $table->unsignedTinyInteger('gender')->default(0)->nullable();
-            $table->string('city')->nullale();
+            $table->string('city')->nullable();
             $table->string('province')->nullable();
             $table->string('country')->nullable();
             $table->timestamps();
