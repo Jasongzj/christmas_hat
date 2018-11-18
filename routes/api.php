@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
-    'namespace' => 'App\Http\Controller\Api',
+    'namespace' => 'App\Http\Controllers\Api',
 ], function ($api) {
     // 登录接口节流
     $api->group([
