@@ -6,16 +6,6 @@ namespace App\Http\Requests\Api;
 class UserRequest extends Request
 {
     /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return false;
-    }
-
-    /**
      * Get the validation rules that apply to the request.
      *
      * @return array
@@ -23,7 +13,8 @@ class UserRequest extends Request
     public function rules()
     {
         return [
-            //
+            'iv' => 'required|string',
+            'encryptData' => 'required|string',
         ];
     }
 }

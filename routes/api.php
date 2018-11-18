@@ -36,5 +36,12 @@ $api->version('v1', [
         'expires' => config('api.rate_limits.access.expries'),
     ], function ($api) {
 
+        // 需要认证的接口
+        $api->group([
+            'middleware' => 'api.auth'
+        ], function ($api) {
+            $api->post('user', 'UsersController@update')
+                ->name('api.user.update');
+        });
     });
 });
