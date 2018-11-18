@@ -6,7 +6,7 @@ use App\Http\Requests\Api\AuthorizationRequest;
 use App\Models\User;
 use Auth;
 
-class AuthorizationController extends Controller
+class AuthorizationsController extends Controller
 {
     public function store(AuthorizationRequest $request)
     {
