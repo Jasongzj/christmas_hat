@@ -10,6 +10,7 @@ class UserTransformer extends TransformerAbstract
     public function transform(User $user)
     {
         return [
+            'id' => $user->id,
             'nickname' => $user->nickname,
             'avatar_url' => $user->avatar_url,
             'gender' => $user->gender,
