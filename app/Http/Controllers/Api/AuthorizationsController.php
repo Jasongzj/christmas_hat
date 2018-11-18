@@ -31,7 +31,7 @@ class AuthorizationsController extends Controller
             $user->save();
         }
 
-        $token = Auth::guard('api')->fromUser($user);
+        $token = Auth::guard('api')->login($user);
 
         return $this->respondWithToken($token)->setStatusCode(201);
     }
