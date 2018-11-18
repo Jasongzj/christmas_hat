@@ -25,8 +25,8 @@ $api->version('v1', [
         'expires' => config('api.rate_limits.sign.expires'),
     ], function ($api) {
         // 登录认证接口
-        $api->post('authorization', 'AuthorizationController@store')
-            ->name('api.authorization.store');
+        $api->post('authorizations', 'AuthorizationsController@store')
+            ->name('api.authorizations.store');
     });
 
     // 普通接口节流
