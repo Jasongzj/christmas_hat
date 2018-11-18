@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\Api\UserRequest;
 use App\Transformers\UserTransformer;
+use Auth;
 
 class UsersController extends Controller
 {
