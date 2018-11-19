@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     public function update(UserRequest $request)
     {
-        $user = Auth::guard('api')->getUser();
+        $user = Auth::guard('api')->user();
 
         $iv = $request->input('iv');
         $encryptData = $request->input('encryptData');
@@ -26,6 +26,6 @@ class UsersController extends Controller
         $user->country = $decryptData['country'];
         $user->save();
 
-        $this->response->item($user,new UserTransformer());
+        return $this->response->item($user, new UserTransformer());
     }
 }
