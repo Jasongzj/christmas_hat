@@ -40,8 +40,13 @@ $api->version('v1', [
         $api->group([
             'middleware' => 'api.auth'
         ], function ($api) {
-            $api->post('user', 'UsersController@update')
+            // 更新用户信息
+            $api->put('user', 'UsersController@update')
                 ->name('api.user.update');
+
+            // 人脸检测
+            $api->post('face/detect', 'FaceController@detect')
+                ->name('api.face.detect');
         });
     });
 });

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6d2bed692a365f1a1770aba4645fac5",
+    "content-hash": "f5f51a96df4098c080bd804f5ff41102",
     "packages": [
         {
             "name": "dingo/api",
@@ -928,6 +928,55 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jasongzj/laravel-qcloud-image",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jasongzj/laravel-qcloud-image.git",
+                "reference": "51d84ea766c082a890a3563712a8d543066df009"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jasongzj/laravel-qcloud-image/zipball/51d84ea766c082a890a3563712a8d543066df009",
+                "reference": "51d84ea766c082a890a3563712a8d543066df009",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jasongzj\\LaravelQcloudImage\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jasongzj\\LaravelQcloudImage\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jasongzj",
+                    "email": "jasongzj@163.com"
+                }
+            ],
+            "description": "tencent image recgnition SDK for Laravel",
+            "time": "2018-11-22T12:30:58+00:00"
         },
         {
             "name": "laravel/framework",
