@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5f51a96df4098c080bd804f5ff41102",
+    "content-hash": "86e75263c1dd233ae7664aa5b5ffeba0",
     "packages": [
         {
             "name": "dingo/api",
@@ -931,16 +931,16 @@
         },
         {
             "name": "jasongzj/laravel-qcloud-image",
-            "version": "0.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jasongzj/laravel-qcloud-image.git",
-                "reference": "51d84ea766c082a890a3563712a8d543066df009"
+                "reference": "9828f8c6fb4f98001e08dcf0294596a636ce1d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jasongzj/laravel-qcloud-image/zipball/51d84ea766c082a890a3563712a8d543066df009",
-                "reference": "51d84ea766c082a890a3563712a8d543066df009",
+                "url": "https://api.github.com/repos/Jasongzj/laravel-qcloud-image/zipball/9828f8c6fb4f98001e08dcf0294596a636ce1d01",
+                "reference": "9828f8c6fb4f98001e08dcf0294596a636ce1d01",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -976,7 +976,7 @@
                 }
             ],
             "description": "tencent image recgnition SDK for Laravel",
-            "time": "2018-11-22T12:30:58+00:00"
+            "time": "2018-11-26T02:14:12+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5868,7 +5868,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "jasongzj/laravel-qcloud-image": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
