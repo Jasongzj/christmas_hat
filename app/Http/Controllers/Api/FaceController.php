@@ -13,9 +13,15 @@ class FaceController extends Controller
 
     public function detect(FaceRequest $request, QcloudImage $qcloudImage)
     {
-        $image['file'] = $request->file('image')->getRealPath();
-        // 先检测是否黄图
-        $picture['files'][] = $image['file'];
+        if ($request->input('image')) {
+            $image['url'] = $request->input('image');
+            $picture['urls'][] = $request->input('image');
+        } else {
+            $image['file'] = $request->file('image')->getRealPath();
+            // 先检测是否黄图
+            $picture['files'][] = $image['file'];
+        }
+
         $pornResponse = $qcloudImage->pornDetect($picture);
 
         if ($pornResponse['result_list'][0]['code'] != 0) {
