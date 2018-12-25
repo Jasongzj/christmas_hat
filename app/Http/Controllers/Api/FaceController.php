@@ -20,6 +20,8 @@ class FaceController extends Controller
             $image['file'] = $request->file('image')->getRealPath();
             // 先检测是否黄图
             $picture['files'][] = $image['file'];
+            // 保存图片至本地
+            $request->file('image')->store('images');
         }
 
         $pornResponse = $qcloudImage->pornDetect($picture);
