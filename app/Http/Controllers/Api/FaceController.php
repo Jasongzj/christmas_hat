@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Requests\Api\FaceRequest;
+use Carbon\Carbon;
 use Jasongzj\LaravelQcloudImage\QcloudImage;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -16,6 +17,7 @@ class FaceController extends Controller
         if ($request->input('image')) {
             $image['url'] = $request->input('image');
             $picture['urls'][] = $request->input('image');
+            file_put_contents(storage_path('app/images'). DIRECTORY_SEPARATOR . md5(Carbon::now()) . '.jpg', file_get_contents($image['url']));
         } else {
             $image['file'] = $request->file('image')->getRealPath();
             // 先检测是否黄图
